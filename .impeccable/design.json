@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T21:25:59.800Z",
+  "generatedAt": "2026-11-10T18:49:00.000Z",
   "title": "Design System: Eashan Patel",
   "extensions": {
     "colorMeta": {
@@ -154,6 +154,36 @@
           "#f3eee2"
         ]
       },
+      "quest-face": {
+        "role": "neutral",
+        "displayName": "Card Cream",
+        "canonical": "oklch(99.3% 0.011 95.2)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#26241d",
+          "#434035",
+          "#625e4f",
+          "#827d6a",
+          "#a39f8d",
+          "#c8c4b7",
+          "#f1efe5"
+        ]
+      },
+      "chip-edge": {
+        "role": "neutral",
+        "displayName": "Chip Edge",
+        "canonical": "oklch(83.3% 0.063 89.8)",
+        "tonalRamp": [
+          "#0e0b05",
+          "#292415",
+          "#483f28",
+          "#695d3c",
+          "#8c7c52",
+          "#ab9d7a",
+          "#cec3a8",
+          "#f5eedb"
+        ]
+      },
       "paper-white": {
         "role": "neutral",
         "displayName": "Paper White",
@@ -243,6 +273,81 @@
           "#ebcd8f",
           "#ffedc6"
         ]
+      },
+      "legendary": {
+        "role": "tertiary",
+        "displayName": "Legendary Gold",
+        "canonical": "oklch(70.4% 0.131 81.1)",
+        "tonalRamp": [
+          "#120900",
+          "#322000",
+          "#553a00",
+          "#7b5600",
+          "#a47300",
+          "#c19748",
+          "#e0bf86",
+          "#ffecc6"
+        ]
+      },
+      "epic": {
+        "role": "tertiary",
+        "displayName": "Epic Purple",
+        "canonical": "oklch(46.9% 0.152 301.7)",
+        "tonalRamp": [
+          "#0e0718",
+          "#2a1b3e",
+          "#493269",
+          "#6b4a96",
+          "#8e64c6",
+          "#ad8ae0",
+          "#cfb6f9",
+          "#f6e5ff"
+        ]
+      },
+      "rare": {
+        "role": "tertiary",
+        "displayName": "Rare Blue",
+        "canonical": "oklch(48.1% 0.108 254.5)",
+        "tonalRamp": [
+          "#010b1c",
+          "#082649",
+          "#14457c",
+          "#3767a2",
+          "#5a8cc9",
+          "#84b1ea",
+          "#b4d4fc",
+          "#dcf1ff"
+        ]
+      },
+      "badge-leaf": {
+        "role": "tertiary",
+        "displayName": "Badge Leaf",
+        "canonical": "oklch(88.6% 0.058 126.9)",
+        "tonalRamp": [
+          "#090c06",
+          "#212619",
+          "#3b432f",
+          "#576346",
+          "#74845f",
+          "#96a484",
+          "#bec9b0",
+          "#eaf2e1"
+        ]
+      },
+      "badge-rose": {
+        "role": "tertiary",
+        "displayName": "Badge Rose",
+        "canonical": "oklch(89.6% 0.041 6.6)",
+        "tonalRamp": [
+          "#0f090a",
+          "#2c2123",
+          "#4c3a3d",
+          "#6f565a",
+          "#937479",
+          "#b2969b",
+          "#d4bec1",
+          "#f9eaec"
+        ]
       }
     },
     "typographyMeta": {
@@ -252,38 +357,54 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Project names and Contact; node tile numerals use the same face at 1.5rem."
+        "purpose": "Section names; the games band heading runs smaller."
+      },
+      "card-title": {
+        "displayName": "Card Title",
+        "purpose": "Quest card names."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "The HUD name; the role line uses weight 500 at this size in deep scarlet."
+        "purpose": "The HUD name and experience role headings; the role line uses 500 in deep scarlet."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "HUD section words and the Start hint plate."
       },
       "label": {
         "displayName": "Pixel Label",
-        "purpose": "Short labels only: fact-list terms, HUD pips, the Start hint."
+        "purpose": "Fact-list terms, log dates, rarity rows, group labels."
       },
       "lead": {
         "displayName": "Lead",
-        "purpose": "The one-line what-it-is sentence on each board."
+        "purpose": "The one-line sentence on the Contact board."
+      },
+      "bio": {
+        "displayName": "Bio",
+        "purpose": "About paragraphs, max 66ch; key names 700 in deep scarlet."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "All running text; max 62ch inside boards."
+        "purpose": "All running text."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Card descriptions, achievement detail, interest tags, credits."
       },
       "button": {
         "displayName": "Button",
-        "purpose": "Button labels and HUD links."
+        "purpose": "Button labels; text links at 700."
       },
-      "numeral": {
-        "displayName": "Numeral",
-        "purpose": "Real figures only, tabular."
+      "loot": {
+        "displayName": "Loot",
+        "purpose": "Stack names inside loot chips; the only mono use."
       }
     },
     "shadows": [
       {
         "name": "press-rest",
         "value": "0 4px 0 #1f2328",
-        "purpose": "Buttons and node tiles at rest."
+        "purpose": "Buttons at rest; node tiles and badges always."
       },
       {
         "name": "press-lift",
@@ -296,14 +417,14 @@
         "purpose": "Button active, paired with translateY(3px)."
       },
       {
-        "name": "hud-press",
+        "name": "ink-press",
         "value": "0 3px 0 #000",
-        "purpose": "Buttons on the ink HUD bar; 0 5px 0 #000 on hover."
+        "purpose": "Buttons on ink fields (HUD button, games toggle); 0 5px 0 #000 on hover."
       },
       {
         "name": "board-ledge",
         "value": "0 10px 0 -3px #c9ad6a, 0 18px 30px -12px rgba(31, 35, 40, .45)",
-        "purpose": "Every signboard: a sand ledge plus a cast shadow on the grass. Static."
+        "purpose": "Top-level signboards only: a sand ledge plus a cast shadow on the grass. Static."
       },
       {
         "name": "marker",
@@ -320,7 +441,12 @@
       {
         "name": "press",
         "value": "120ms",
-        "purpose": "Button transform, shadow and face colour."
+        "purpose": "Button and toggle transform, shadow and face colour."
+      },
+      {
+        "name": "nav-underline",
+        "value": "250ms",
+        "purpose": "The gold HUD underline grows from the left on hover and for the current section."
       },
       {
         "name": "node-state",
@@ -330,12 +456,17 @@
       {
         "name": "link-arrow",
         "value": "200ms",
-        "purpose": "Link arrow nudges 4px right on hover."
+        "purpose": "Link and hint arrows nudge 4px right on hover."
       },
       {
-        "name": "hint-nudge",
-        "value": "1.6s infinite",
-        "purpose": "Down arrow on the Start hint; only without a reduced-motion preference."
+        "name": "capture-zoom",
+        "value": "400ms, scale(1.03)",
+        "purpose": "Quest card capture on card hover."
+      },
+      {
+        "name": "marquee",
+        "value": "linear, about 60px/s",
+        "purpose": "Games band loop; paused on hover or by the toggle; static and wrapped under reduced motion."
       },
       {
         "name": "marker-walk",
@@ -367,33 +498,41 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The scarlet email action; one per region.",
+      "description": "Scarlet primary action; one per board or card.",
       "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 6h18v12H3z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"m3 7 9 7 9-7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg><span>eashanpatel@gmail.com</span></a>",
       "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;font:600 1rem/1.2 \"Atkinson Hyperlegible Next\",system-ui,sans-serif;text-decoration:none;color:#fff;background:#c8102e;border:3px solid #1f2328;border-radius:0;box-shadow:0 4px 0 #1f2328;transition:transform .12s cubic-bezier(.16,1,.3,1),box-shadow .12s cubic-bezier(.16,1,.3,1),background-color .12s}.ds-btn-primary svg{width:20px;height:20px;flex:none}.ds-btn-primary:active{transform:translateY(3px);box-shadow:0 1px 0 #1f2328}.ds-btn-primary:focus-visible{outline:3px solid #c8102e;outline-offset:3px}.ds-btn-primary:hover{background:#d9142f;transform:translateY(-2px);box-shadow:0 6px 0 #1f2328}"
+    },
+    {
+      "name": "Small Button",
+      "kind": "button",
+      "refersTo": "button-sm",
+      "description": "44px quest-card actions: a scarlet primary beside a cream Source button.",
+      "html": "<div class=\"ds-row\"><a class=\"ds-btn-sm ds-btn-sm-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M14 4h6v6M20 4l-9 9M18 14v6H4V6h6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg><span>Play live</span></a><a class=\"ds-btn-sm\" href=\"#\"><span>Source</span></a></div>",
+      "css": ".ds-row{display:flex;gap:10px}.ds-btn-sm{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;font:600 .9375rem/1.2 \"Atkinson Hyperlegible Next\",system-ui,sans-serif;text-decoration:none;border:3px solid #1f2328;border-radius:0;box-shadow:0 4px 0 #1f2328;transition:transform .12s cubic-bezier(.16,1,.3,1),box-shadow .12s cubic-bezier(.16,1,.3,1),background-color .12s;color:#1f2328;background:#fff8e6}.ds-btn-sm svg{width:18px;height:18px;flex:none}.ds-btn-sm-primary{background:#c8102e;color:#fff}.ds-btn-sm:hover{background:#fff;transform:translateY(-2px);box-shadow:0 6px 0 #1f2328}.ds-btn-sm-primary:hover{background:#d9142f}.ds-btn-sm:active{transform:translateY(3px);box-shadow:0 1px 0 #1f2328}.ds-btn-sm:focus-visible{outline:3px solid #c8102e;outline-offset:3px}"
     },
     {
       "name": "Text Link",
       "kind": "custom",
       "refersTo": "link",
       "description": "Bold underlined link with a trailing arrow; the sand underline turns scarlet on hover.",
-      "html": "<a class=\"ds-link\" href=\"#\">Read the code<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg></a>",
-      "css": ".ds-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:700 1.0625rem/1.6 \"Atkinson Hyperlegible Next\",system-ui,sans-serif;color:#1f2328;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:#c9ad6a}.ds-link svg{width:18px;height:18px;transition:transform .2s cubic-bezier(.16,1,.3,1)}.ds-link:hover{text-decoration-color:#c8102e}.ds-link:hover svg{transform:translateX(4px)}.ds-link:focus-visible{outline:3px solid #c8102e;outline-offset:3px}"
+      "html": "<a class=\"ds-link\" href=\"#\">See all my projects on GitHub<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:700 1.0625rem/1.6 \"Atkinson Hyperlegible Next\",system-ui,sans-serif;color:#1f2328;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:#c9ad6a}.ds-link svg{width:16px;height:16px;transition:transform .2s cubic-bezier(.16,1,.3,1)}.ds-link:hover{text-decoration-color:#c8102e}.ds-link:hover svg{transform:translateX(4px)}.ds-link:focus-visible{outline:3px solid #c8102e;outline-offset:3px}"
     },
     {
-      "name": "HUD Level Select",
+      "name": "HUD Navigation",
       "kind": "nav",
       "refersTo": "hud",
-      "description": "Sticky ink bar with the pixel name and numbered level pips; the current pip is scarlet with a gold border.",
-      "html": "<nav class=\"ds-hud\"><a class=\"ds-hud-name\" href=\"#\">Eashan Patel</a><div class=\"ds-hud-levels\"><a href=\"#\"><span class=\"ds-pip\">1</span>ScarletParking</a><a href=\"#\" aria-current=\"step\"><span class=\"ds-pip\">2</span>Tandem</a><a href=\"#\"><span class=\"ds-pip\">3</span>RU Subletting</a></div></nav>",
-      "css": ".ds-hud{display:flex;align-items:center;gap:24px;height:60px;padding:0 20px;background:#1f2328;color:#fff8e6;border-bottom:3px solid #0d0f12}.ds-hud-name{font:700 1.375rem/1 \"Pixelify Sans\",ui-monospace,monospace;letter-spacing:.02em;color:inherit;text-decoration:none}.ds-hud-levels{display:flex;gap:4px;margin-left:auto}.ds-hud-levels a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 10px;color:#e9dfc8;text-decoration:none;font:400 .9375rem/1.6 \"Atkinson Hyperlegible Next\",system-ui,sans-serif}.ds-hud-levels a:hover{text-decoration:underline;text-underline-offset:4px}.ds-hud-levels a:focus-visible,.ds-hud-name:focus-visible{outline:3px solid #f2c14e;outline-offset:3px}.ds-pip{display:inline-grid;place-items:center;width:26px;height:26px;font:700 .875rem/1 \"Pixelify Sans\",ui-monospace,monospace;color:#1f2328;background:#fff8e6;border:2px solid #fff8e6}.ds-hud-levels a[aria-current=\"step\"]{color:#fff}.ds-hud-levels a[aria-current=\"step\"] .ds-pip{background:#c8102e;color:#fff8e6;border-color:#f2c14e}"
+      "description": "Sticky ink bar: pixel name, five pixel section words with a gold underline on the current one, a scarlet Resume download.",
+      "html": "<nav class=\"ds-hud\"><a class=\"ds-hud-name\" href=\"#\">Eashan Patel</a><div class=\"ds-hud-nav\"><a href=\"#\">About</a><a href=\"#\" aria-current=\"location\">Projects</a><a href=\"#\">Experience</a><a href=\"#\">Resume</a><a href=\"#\">Contact</a></div><a class=\"ds-hud-btn\" href=\"#\">Resume</a></nav>",
+      "css": ".ds-hud{display:flex;align-items:center;gap:24px;height:60px;padding:0 20px;background:#1f2328;color:#fff8e6;border-bottom:3px solid #0d0f12}.ds-hud-name{font:700 1.375rem/1 \"Pixelify Sans\",ui-monospace,monospace;letter-spacing:.02em;color:inherit;text-decoration:none;white-space:nowrap}.ds-hud-nav{display:flex;gap:4px;margin-left:auto}.ds-hud-nav a{position:relative;display:flex;align-items:center;min-height:44px;padding:0 12px;font:500 1.0625rem/1 \"Pixelify Sans\",ui-monospace,monospace;color:#e9dfc8;text-decoration:none}.ds-hud-nav a::after{content:\"\";position:absolute;left:12px;right:12px;bottom:6px;height:3px;background:#f2c14e;transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-hud-nav a:hover,.ds-hud-nav a[aria-current]{color:#fff}.ds-hud-nav a:hover::after,.ds-hud-nav a[aria-current]::after{transform:scaleX(1)}.ds-hud a:focus-visible{outline:3px solid #f2c14e;outline-offset:3px}.ds-hud-btn{display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font:600 1rem/1.2 \"Atkinson Hyperlegible Next\",system-ui,sans-serif;color:#fff;background:#c8102e;border:3px solid #fff8e6;box-shadow:0 3px 0 #000;text-decoration:none;transition:transform .12s,box-shadow .12s}.ds-hud-btn:hover{background:#d9142f;transform:translateY(-2px);box-shadow:0 5px 0 #000}"
     },
     {
       "name": "Trail Node Tiles",
       "kind": "custom",
       "refersTo": "node-tile",
-      "description": "Cleared, current and ahead node tiles; the current tile adds an ink outline so state reads by shape.",
-      "html": "<div class=\"ds-nodes\"><span class=\"ds-node ds-node-cleared\">1</span><span class=\"ds-node ds-node-current\">2</span><span class=\"ds-node\">3</span></div>",
-      "css": ".ds-nodes{display:flex;gap:28px;padding:24px;background:#7cb35a}.ds-node{display:grid;place-items:center;min-width:52px;height:52px;padding:0 10px;font:700 1.5rem/1 \"Pixelify Sans\",ui-monospace,monospace;color:#1f2328;background:#fff8e6;border:3px solid #1f2328;box-shadow:0 4px 0 #1f2328;outline:3px solid transparent;outline-offset:4px;transition:background-color .3s,color .3s,outline-color .3s}.ds-node-cleared{background:#1f2328;color:#fff8e6}.ds-node-current{background:#c8102e;color:#fff;outline-color:#1f2328}"
+      "description": "Sprite node tiles: cleared sand, current gold with an ink outline, ahead cream.",
+      "html": "<div class=\"ds-nodes\"><span class=\"ds-node ds-node-cleared\"><svg viewBox=\"0 0 9 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"1\" y=\"0\" width=\"7\" height=\"1\" fill=\"#4b3220\"/><rect x=\"0\" y=\"1\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"1\" y=\"1\" width=\"7\" height=\"1\" fill=\"#9a6a3f\"/><rect x=\"8\" y=\"1\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"0\" y=\"2\" width=\"4\" height=\"1\" fill=\"#4b3220\"/><rect x=\"4\" y=\"2\" width=\"1\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"5\" y=\"2\" width=\"4\" height=\"1\" fill=\"#4b3220\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"1\" y=\"3\" width=\"3\" height=\"1\" fill=\"#9a6a3f\"/><rect x=\"4\" y=\"3\" width=\"1\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"5\" y=\"3\" width=\"3\" height=\"1\" fill=\"#9a6a3f\"/><rect x=\"8\" y=\"3\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"1\" y=\"4\" width=\"7\" height=\"1\" fill=\"#9a6a3f\"/><rect x=\"8\" y=\"4\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"1\" y=\"5\" width=\"7\" height=\"1\" fill=\"#9a6a3f\"/><rect x=\"8\" y=\"5\" width=\"1\" height=\"1\" fill=\"#4b3220\"/><rect x=\"0\" y=\"6\" width=\"9\" height=\"1\" fill=\"#4b3220\"/></svg></span><span class=\"ds-node ds-node-current\"><svg viewBox=\"0 0 10 12\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"0\" y=\"0\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"1\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"1\" y=\"1\" width=\"6\" height=\"1\" fill=\"#c8102e\"/><rect x=\"0\" y=\"2\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"1\" y=\"2\" width=\"2\" height=\"1\" fill=\"#c8102e\"/><rect x=\"3\" y=\"2\" width=\"1\" height=\"1\" fill=\"#fff8e6\"/><rect x=\"4\" y=\"2\" width=\"4\" height=\"1\" fill=\"#c8102e\"/><rect x=\"0\" y=\"3\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"1\" y=\"3\" width=\"8\" height=\"1\" fill=\"#c8102e\"/><rect x=\"0\" y=\"4\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"1\" y=\"4\" width=\"6\" height=\"1\" fill=\"#c8102e\"/><rect x=\"0\" y=\"5\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"6\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"7\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"8\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"9\" width=\"1\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"10\" width=\"2\" height=\"1\" fill=\"#1f2328\"/><rect x=\"0\" y=\"11\" width=\"3\" height=\"1\" fill=\"#1f2328\"/></svg></span><span class=\"ds-node\"><svg viewBox=\"0 0 8 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"0\" y=\"0\" width=\"1\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"2\" y=\"0\" width=\"4\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"7\" y=\"0\" width=\"1\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"0\" y=\"1\" width=\"8\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"1\" y=\"2\" width=\"2\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"3\" y=\"2\" width=\"1\" height=\"1\" fill=\"#fff8e6\"/><rect x=\"4\" y=\"2\" width=\"3\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"2\" y=\"3\" width=\"4\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"3\" y=\"5\" width=\"2\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"2\" y=\"6\" width=\"4\" height=\"1\" fill=\"#4b3220\"/><rect x=\"1\" y=\"7\" width=\"6\" height=\"1\" fill=\"#4b3220\"/></svg></span></div>",
+      "css": ".ds-nodes{display:flex;gap:28px;padding:24px;background:#7cb35a}.ds-node{display:grid;place-items:center;width:52px;height:52px;background:#fff8e6;border:3px solid #1f2328;box-shadow:0 4px 0 #1f2328;outline:3px solid transparent;outline-offset:4px;transition:background-color .3s,outline-color .3s}.ds-node svg{width:28px;height:28px}.ds-node-cleared{background:#ecd9a2}.ds-node-current{background:#f2c14e;outline-color:#1f2328}"
     },
     {
       "name": "Trail Stones and Dots",
@@ -404,72 +543,85 @@
       "css": ".ds-trail{display:block;width:320px;height:48px;background:#7cb35a}"
     },
     {
-      "name": "Level Signboard",
+      "name": "Quest Card",
       "kind": "card",
-      "refersTo": "board",
-      "description": "Cream board with ink border and sand ledge; identical anatomy for each level.",
-      "html": "<article class=\"ds-board\"><h3>Tandem</h3><p class=\"ds-what\">A hosted mediator that lets several coding agents work on one GitHub repo without colliding.</p><dl class=\"ds-record\"><div><dt>Built with</dt><dd>Arnav Mabrukar</dd></div><div><dt>Stack</dt><dd>Python, TypeScript, PostgreSQL, MCP</dd></div></dl></article>",
-      "css": ".ds-board{display:grid;gap:18px;max-width:520px;padding:40px;background:#fff8e6;color:#1f2328;border:3px solid #1f2328;border-radius:0;box-shadow:0 10px 0 -3px #c9ad6a,0 18px 30px -12px rgba(31,35,40,.45);font:400 1.0625rem/1.6 \"Atkinson Hyperlegible Next\",system-ui,sans-serif}.ds-board h3{margin:0;font:700 2.25rem/1.05 \"Pixelify Sans\",ui-monospace,monospace;letter-spacing:.01em}.ds-what{margin:0;font-size:1.25rem;line-height:1.45;font-weight:600}.ds-record{margin:0;border-top:2px solid #1f2328}.ds-record>div{display:grid;grid-template-columns:7.5rem 1fr;gap:12px;padding:9px 0;border-bottom:2px dotted #c9ad6a}.ds-record dt{font:500 1rem/1.55 \"Pixelify Sans\",ui-monospace,monospace;color:#4a4237}.ds-record dd{margin:0}"
+      "refersTo": "quest-card",
+      "description": "Project card: rarity bar, 16:10 capture, rarity row, name, scarlet tagline, description, loot chips, two small buttons.",
+      "html": "<article class=\"ds-quest\"><div class=\"ds-quest-shot\"></div><div class=\"ds-quest-body\"><p class=\"ds-quest-meta\"><span class=\"ds-rarity\">Epic</span></p><h4>Tandem</h4><p class=\"ds-quest-tag\">A hosted mediator that lets coding agents on separate machines work together without colliding</p><p class=\"ds-quest-desc\">Agents claim tasks and files over MCP, humans approve tasks and a dashboard shows the project state.</p><ul class=\"ds-loot\"><li>Python</li><li>TypeScript</li><li>PostgreSQL</li><li>MCP</li></ul></div></article>",
+      "css": ".ds-quest{display:flex;flex-direction:column;max-width:340px;background:#fffdf5;color:#1f2328;border:3px solid #1f2328;border-top:8px solid #6b3fa0;font:400 1.0625rem/1.6 \"Atkinson Hyperlegible Next\",system-ui,sans-serif}.ds-quest-shot{aspect-ratio:16/10;background:#f4e8c8;border-bottom:3px solid #1f2328}.ds-quest-body{display:flex;flex-direction:column;gap:10px;padding:18px 18px 20px}.ds-quest-meta{margin:0;font:500 .9375rem/1.2 \"Pixelify Sans\",ui-monospace,monospace;color:#4a4237}.ds-rarity{display:inline-flex;align-items:center;gap:6px;color:#6b3fa0}.ds-rarity::before{content:\"\";width:8px;height:8px;background:currentColor;transform:rotate(45deg)}.ds-quest h4{margin:0;font:700 1.5rem/1.1 \"Pixelify Sans\",ui-monospace,monospace;letter-spacing:.01em}.ds-quest-tag{margin:0;font-weight:700;line-height:1.35;color:#9b0c23}.ds-quest-desc{margin:0;font-size:.9375rem;line-height:1.5;color:#4a4237}.ds-loot{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}.ds-loot li{font:600 .8125rem/1 \"Atkinson Hyperlegible Mono\",ui-monospace,monospace;padding:6px 8px;background:#f4e8c8;border:2px solid #d8c79a}"
     },
     {
-      "name": "Score Chips",
-      "kind": "chip",
-      "refersTo": "score-chip",
-      "description": "Ink plates carrying real figures in gold mono.",
-      "html": "<ul class=\"ds-score\"><li><span class=\"ds-num\">1,500+</span> downloads</li><li><span class=\"ds-num\">Top 100</span> in Navigation</li><li><span class=\"ds-num\">5.0</span> average rating</li></ul>",
-      "css": ".ds-score{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}.ds-score li{display:inline-flex;align-items:baseline;gap:8px;padding:8px 12px;background:#1f2328;color:#fff8e6;font:400 .9375rem/1.6 \"Atkinson Hyperlegible Next\",system-ui,sans-serif}.ds-num{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;font-weight:600;font-variant-numeric:tabular-nums;color:#f2c14e;font-size:1.125rem}"
+      "name": "Achievement Badge",
+      "kind": "custom",
+      "refersTo": "achievement",
+      "description": "Weathered-cream tile with a gold badge square carrying a sprite, a pixel title and a faded-ink line.",
+      "html": "<div class=\"ds-ach\"><span class=\"ds-badge\"><svg viewBox=\"0 0 8 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\"><rect x=\"0\" y=\"0\" width=\"1\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"2\" y=\"0\" width=\"4\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"7\" y=\"0\" width=\"1\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"0\" y=\"1\" width=\"8\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"1\" y=\"2\" width=\"2\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"3\" y=\"2\" width=\"1\" height=\"1\" fill=\"#fff8e6\"/><rect x=\"4\" y=\"2\" width=\"3\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"2\" y=\"3\" width=\"4\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"3\" y=\"4\" width=\"2\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"3\" y=\"5\" width=\"2\" height=\"1\" fill=\"#f2c14e\"/><rect x=\"2\" y=\"6\" width=\"4\" height=\"1\" fill=\"#4b3220\"/><rect x=\"1\" y=\"7\" width=\"6\" height=\"1\" fill=\"#4b3220\"/></svg></span><span><b>Top 100</b>ScarletParking in Apple's Navigation category</span></div>",
+      "css": ".ds-ach{display:flex;align-items:center;gap:16px;max-width:300px;padding:16px;background:#f4e8c8;border:3px solid #1f2328;font:400 .9375rem/1.4 \"Atkinson Hyperlegible Next\",system-ui,sans-serif;color:#4a4237}.ds-ach b{display:block;margin-bottom:4px;font:700 1.25rem/1.15 \"Pixelify Sans\",ui-monospace,monospace;color:#1f2328}.ds-badge{flex:none;display:grid;place-items:center;width:60px;height:60px;background:#f2c14e;border:3px solid #1f2328;box-shadow:0 4px 0 #1f2328}.ds-badge svg{width:32px;height:32px}"
+    },
+    {
+      "name": "Games Band",
+      "kind": "custom",
+      "refersTo": "games-band",
+      "description": "Full-width ink band: pixel heading, square pause toggle, game names separated by gold squares (shown in its static reduced-motion form).",
+      "html": "<section class=\"ds-games\"><div class=\"ds-games-head\"><h2>Games I love playing</h2><button class=\"ds-toggle\" type=\"button\" aria-label=\"Pause the games list\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 5h3v14H7zM14 5h3v14h-3z\" fill=\"currentColor\"/></svg></button></div><ul class=\"ds-track\"><li>Minecraft</li><li>Rocket League</li><li>Overwatch</li></ul></section>",
+      "css": ".ds-games{background:#1f2328;color:#fff8e6;border-block:3px solid #0d0f12;padding:24px 20px 28px}.ds-games-head{display:flex;align-items:center;justify-content:space-between;gap:16px}.ds-games h2{margin:0;font:700 1.75rem/1.05 \"Pixelify Sans\",ui-monospace,monospace}.ds-toggle{display:grid;place-items:center;width:44px;height:44px;padding:0;color:#fff8e6;background:#1f2328;border:3px solid #fff8e6;box-shadow:0 3px 0 #000;cursor:pointer;transition:transform .12s,box-shadow .12s,background-color .12s}.ds-toggle svg{width:18px;height:18px}.ds-toggle:hover{background:#2b3036;transform:translateY(-2px);box-shadow:0 5px 0 #000}.ds-toggle:active{transform:translateY(2px);box-shadow:0 1px 0 #000}.ds-toggle:focus-visible{outline:3px solid #f2c14e;outline-offset:3px}.ds-track{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;row-gap:14px}.ds-track li{display:flex;align-items:center;gap:28px;padding-right:28px;font:700 1.75rem/1 \"Pixelify Sans\",ui-monospace,monospace;white-space:nowrap}.ds-track li::after{content:\"\";width:14px;height:14px;background:#f2c14e;box-shadow:0 0 0 3px #c9962c inset}"
     }
   ],
   "narrative": {
     "northStar": "The Daylight Overworld",
-    "overview": "The page is one map seen from above in full daylight. Grass is the ground for everything, a river meanders through it, and a trail of stepping stones runs from a Start tile, past three numbered level tiles, to a flag and a castle. Content does not float on the map; it stands on cream signboards with heavy ink borders, the way a sign stands in a field. Scrolling is walking: a small player sprite hops along the trail to whichever level is on screen, and the trail behind him becomes solid stone.\n\nEverything on the map is drawn, never photographed or blurred: crisp-edged SVG rectangles on a 4px and 8px grid, `shape-rendering: crispEdges`, `image-rendering: pixelated`. The pixel character comes from those edges and from one pixel display face used sparingly; the reading layer is a plain, highly legible sans so the facts never compete with the costume. The palette is a daylight one (grass, sand, water, cream, ink) with a single brick-scarlet accent. It is light, square, tactile and quick to read.\n\nThe world rejects the black-and-neon gamer HUD. The only dark field is the ink HUD bar and small ink plates; the ground is always grass.",
+    "overview": "The page is one map seen from above in full daylight. Grass is the ground for everything, a river meanders through it, and a trail of stepping stones runs from a Start tile through Projects, Experience and Resume to a flag and a castle at Contact, then on past Achievements to a games band at the edge of the map. Content does not float on the map; it stands on cream signboards with heavy ink borders, the way a sign stands in a field. Scrolling is walking: a small player sprite hops along the trail to whichever section is on screen, and the trail behind him becomes solid stone.\n\nEverything on the map is drawn, never photographed or blurred: crisp-edged SVG rectangles on a 4px and 8px grid, `shape-rendering: crispEdges`, `image-rendering: pixelated`. The grass itself is tiled in three layers (grass texture, scattered pebbles and tufts, small flowers), and the gutters fill with drawn landmarks: trees, bushes, rocks, mushrooms, stumps, houses, signposts, fences and ponds. Each section is marked by a node tile carrying a pixel sprite (chest, briefcase, page, flag, trophy, gamepad), and the favicon is the player sprite on grass. The pixel character comes from those edges and from one pixel display face used for names and short labels; the reading layer is a plain, highly legible sans so the facts never compete with the costume. The palette is a daylight one (grass, sand, water, cream, ink) with a brick-scarlet action colour and coin gold for \"you are here\". It is light, square, tactile and quick to read.\n\nThe world rejects the black-and-neon gamer HUD. Dark fields are the ink HUD bar, the games band near the end of the map and small ink plates; the ground is always grass.",
     "keyCharacteristics": [
-      "Daylight tiled terrain, unbroken from the top of the page to the bottom.",
+      "Daylight tiled terrain with drawn landmarks, unbroken from the top of the page to the bottom.",
       "Square corners everywhere; ink borders of 3px on every raised object.",
       "Vertical-only hard offset shadows as a press-depth system.",
-      "Pixel face for names and short labels; humanist sans for every sentence; mono for real numbers only.",
-      "Path state drawn by shape: solid stepping stones behind, small dots ahead.",
-      "One accent, scarlet, for the current node and the primary action."
+      "Pixel face for names, nav words and short labels; humanist sans for every sentence; mono only for loot (stack) chips.",
+      "Path state drawn by shape: solid stepping stones behind, small dots ahead; the current node adds an outline.",
+      "Scarlet for the primary action, gold for the current position."
     ],
     "rules": [
       {
-        "name": "The One Accent Rule",
-        "body": "Scarlet marks the current position and the primary action only. Nothing decorative is scarlet except the pixel sprites' own cloth.",
+        "name": "The Scarlet Action Rule",
+        "body": "Scarlet fills only primary actions (one per board or card) and the Start tile; deep scarlet carries emphasis in text. Beyond sprites and the log's square bullets, nothing decorative is scarlet.",
         "section": "colors"
       },
       {
-        "name": "The Gold On Ink Rule",
-        "body": "Gold is a highlight on dark plates, never a text colour on cream.",
+        "name": "The Gold Position Rule",
+        "body": "Gold marks where you are and what you earned (the current node, the current HUD word's underline, badges, selection). It is a fill or a rule, never a text colour on cream.",
         "section": "colors"
       },
       {
         "name": "The Daylight Rule",
-        "body": "The ground is grass. Dark fields are limited to the HUD bar and small ink plates; the page never goes dark-mode-neon.",
+        "body": "The ground is grass. Dark fields are limited to the HUD bar, the one games band and small ink plates; the page never goes dark-mode-neon.",
         "section": "colors"
       },
       {
         "name": "The Names Not Sentences Rule",
-        "body": "Pixelify Sans sets names, numerals on tiles and labels of a few words. Any sentence, paragraph, button label or link is Atkinson Hyperlegible Next.",
+        "body": "Pixelify Sans sets names, single-word nav items, game names and labels of a few words. Any sentence, paragraph, button label or inline link is Atkinson Hyperlegible Next.",
         "section": "typography"
       },
       {
-        "name": "The Real Numbers Rule",
-        "body": "The mono face appears only on true figures from the record. No invented scores, levels-as-stats or decorative digits.",
+        "name": "The Loot Rule",
+        "body": "The mono face appears only on loot chips, as item tags for a project's stack. Figures in copy (1,500+, 3.9 GPA) stay in the text face; no invented scores, levels-as-stats or decorative digits.",
         "section": "typography"
       },
       {
         "name": "The Unbroken Terrain Rule",
-        "body": "The grass tile and the world layer span the whole of the main element; no section paints its own background, so there is no seam between regions.",
+        "body": "The grass tile and the world layer span the whole of the main element; no section paints its own background. The games band is the single exception: an object laid across the map, with grass visible above and below it.",
         "section": "layout"
       },
       {
         "name": "The Grid Snap Rule",
-        "body": "Anything drawn on the map snaps to the 8px grid (water) or the 4px grid (trail, planks, marker). Nothing on the map sits at a fractional position.",
+        "body": "Anything drawn on the map snaps to the 8px grid (water) or the 4px grid (trail, planks, landmarks, marker). Nothing on the map sits at a fractional position.",
         "section": "layout"
       },
       {
         "name": "The Vertical Press Rule",
-        "body": "Hard shadows fall straight down (x offset 0) and change only with state: deeper on hover, collapsed on active. Never offset sideways, never as decoration on non-interactive text.",
+        "body": "Hard shadows fall straight down (x offset 0) and change only with state: deeper on hover, collapsed on active. Never offset sideways, never on text.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Ledge Rule",
+        "body": "Only top-level boards carry the ledge. Anything inside a board (quest cards, achievement tiles, chips) is flat, separated by its ink or chip-edge border.",
         "section": "elevation"
       },
       {
@@ -485,20 +637,22 @@
     ],
     "dos": [
       "**Do** keep every corner square (0px) and every raised object on a 3px ink border.",
-      "**Do** use the press-depth shadow (0 4px 0 ink at rest, deeper on hover, collapsed on active) for buttons and node tiles.",
-      "**Do** snap anything drawn on the map to the 8px grid (water) or 4px grid (trail, planks, marker), with crisp edges.",
-      "**Do** set running text, buttons and links in Atkinson Hyperlegible Next; keep Pixelify Sans to names and labels of a few words.",
+      "**Do** use the press-depth shadow (0 4px 0 ink at rest, deeper on hover, collapsed on active) for buttons, and the resting edge for node tiles and badges.",
+      "**Do** snap anything drawn on the map to the 8px grid (water) or 4px grid (trail, planks, landmarks, marker), with crisp edges.",
+      "**Do** set running text, buttons and links in Atkinson Hyperlegible Next; keep Pixelify Sans to names, nav words and labels of a few words.",
       "**Do** draw path and node state with shape (stone vs dot, outline on the current tile) as well as colour.",
-      "**Do** reserve scarlet for the current position and the primary action.",
+      "**Do** keep scarlet for primary actions and the Start tile, gold for the current position and rewards.",
+      "**Do** give every quest card the same anatomy, with its rarity on the bar and the diamond, named by the pixel label.",
       "**Do** keep the grass ground continuous behind every section."
     ],
     "donts": [
       "**Don't** set a sentence, paragraph or button label in the pixel face.",
-      "**Don't** use the mono face on anything but real figures.",
+      "**Don't** use the mono face on anything but loot chips.",
       "**Don't** round corners, or blur or offset press shadows sideways.",
-      "**Don't** turn the page into a dark, black-and-neon gamer HUD; the ground stays daylight grass.",
+      "**Don't** put a ledge on anything inside a board.",
+      "**Don't** turn the page into a dark, black-and-neon gamer HUD; the ground stays daylight grass and the games band is the only full-width dark field.",
       "**Don't** carry path state by colour alone.",
-      "**Don't** put gold text on cream.",
+      "**Don't** put gold or legendary text on cream.",
       "**Don't** copy a specific game's art, names or look; sprites are drawn for this world."
     ]
   }

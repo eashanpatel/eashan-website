@@ -194,12 +194,18 @@
   draw();
   go(0);
 
-  // the games carousel: a seamless loop that pauses under the pointer; still under reduced motion
+  // the games carousel: a seamless loop with a square pause button (and a pause under the pointer); still under reduced motion
   const mq = document.querySelector('[data-marquee]');
   if (mq && !reduced.matches) {
     const track = mq.querySelector('.marquee__track');
     for (const li of [...track.children]) { const c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); track.append(c); }
     mq.style.setProperty('--marquee-time', `${Math.round(track.scrollWidth / 2 / 60)}s`);
     mq.classList.add('is-running');
+    const toggle = document.querySelector('.games__toggle');
+    toggle?.addEventListener('click', () => {
+      const paused = mq.classList.toggle('is-paused');
+      toggle.setAttribute('aria-label', paused ? 'Play the games list' : 'Pause the games list');
+      toggle.querySelector('use').setAttribute('href', paused ? '#i-play' : '#i-pause');
+    });
   }
 })();
